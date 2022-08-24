@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  python:
+    image: python:3.8
+    volumes:
+      - ./giphy_app:/giphy_app
+
+    ports:
+      - 8000:8000
+    command: bash -c "cd./giphy_app && pip install -r requirements.txt &&python manage.py
